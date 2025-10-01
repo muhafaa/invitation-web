@@ -99,7 +99,6 @@ const route = useRoute()
 const router = useRouter()
 const guestName = ref(route.query.kpd || 'Tamu Undangan')
 const isOpening = ref(false)
-const mockAPI = useMockAPI()
 
 // Use static wedding data
 const weddingDataComputed = staticWeddingData
