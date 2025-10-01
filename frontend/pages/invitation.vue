@@ -153,18 +153,11 @@ const visibleSections = ref(new Set())
 const scrollProgress = ref(0)
 const mockAPI = useMockAPI()
 
-// Load wedding data
-const weddingDataRef = ref(null)
+// Use static wedding data
+const weddingDataComputed = staticWeddingData
 
-onMounted(async () => {
+onMounted(() => {
   isVisible.value = true
-  
-  try {
-    const data = await mockAPI.getWeddingData()
-    weddingDataRef.value = data
-  } catch (error) {
-    console.error('Error loading wedding data:', error)
-  }
   
   // Set up scroll listener
   window.addEventListener('scroll', handleScroll)
@@ -174,9 +167,6 @@ onMounted(async () => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
-
-// Use weddingData from composable
-const weddingDataComputed = computed(() => weddingDataRef.value || staticWeddingData)
 
 const handleScroll = () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop
