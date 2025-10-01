@@ -114,7 +114,7 @@ onMounted(async () => {
 })
 
 // Use weddingData from composable
-const weddingDataComputed = computed(() => weddingDataRef.value || weddingData)
+const weddingDataComputed = computed(() => weddingDataRef.value || staticWeddingData)
 
 const openInvitation = () => {
   isOpening.value = true
