@@ -151,7 +151,6 @@ const isVisible = ref(false)
 const showScrollTop = ref(false)
 const visibleSections = ref(new Set())
 const scrollProgress = ref(0)
-const mockAPI = useMockAPI()
 
 // Use static wedding data
 const weddingDataComputed = staticWeddingData
