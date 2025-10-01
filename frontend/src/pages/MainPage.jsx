@@ -1,79 +1,165 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Separator } from '../components/ui/separator';
 import PhotoCarousel from '../components/PhotoCarousel';
 import IslamicQuote from '../components/IslamicQuote';
 import CoupleProfiles from '../components/CoupleProfiles';
 import CeremonyDetails from '../components/CeremonyDetails';
 import GuestForm from '../components/GuestForm';
-import Navigation from '../components/Navigation';
-import { Heart, Calendar, MapPin, Camera, Users, MessageCircle } from 'lucide-react';
+import { Heart, Calendar, ArrowUp } from 'lucide-react';
 
 const MainPage = ({ weddingData }) => {
-  const [activeSection, setActiveSection] = useState('home');
   const [isVisible, setIsVisible] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [visibleSections, setVisibleSections] = useState(new Set());
+  
+  const sectionRefs = {
+    home: useRef(null),
+    quote: useRef(null),
+    gallery: useRef(null),
+    couple: useRef(null),
+    ceremony: useRef(null),
+    rsvp: useRef(null)
+  };
 
   useEffect(() => {
     setIsVisible(true);
+    
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 500);
+      
+      // Check which sections are visible
+      const newVisibleSections = new Set();
+      Object.entries(sectionRefs).forEach(([key, ref]) => {
+        if (ref.current) {
+          const rect = ref.current.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+            newVisibleSections.add(key);
+          }
+        }
+      });
+      setVisibleSections(newVisibleSections);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+    
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const sections = {
-    home: { icon: Heart, title: 'Beranda', component: HomeSection },
-    quote: { icon: MessageCircle, title: 'Ayat Suci', component: () => <IslamicQuote quote={weddingData.islamicQuote} /> },
-    gallery: { icon: Camera, title: 'Galeri', component: () => <PhotoCarousel photos={weddingData.gallery} /> },
-    couple: { icon: Users, title: 'Mempelai', component: () => <CoupleProfiles couple={weddingData.couple} /> },
-    ceremony: { icon: Calendar, title: 'Acara', component: () => <CeremonyDetails ceremony={weddingData.ceremony} /> },
-    rsvp: { icon: MapPin, title: 'Konfirmasi', component: GuestForm }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const CurrentSection = sections[activeSection].component;
+  const ScrollSection = ({ id, children, className = "" }) => {
+    const isVisible = visibleSections.has(id);
+    return (
+      <section 
+        ref={sectionRefs[id]}
+        className={`transition-all duration-1000 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        } ${className}`}
+      >
+        {children}
+      </section>
+    );
+  };
 
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-navy-100 transition-all duration-1000 ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      isVisible ? 'opacity-100' : 'opacity-0'
     }`}>
-      {/* Header */}
-      <header className="relative bg-white/80 backdrop-blur-md shadow-sm border-b border-navy-100 sticky top-0 z-40">
-        <div className="container mx-auto px-4 py-4">
+      {/* Floating Header */}
+      <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-sm border-b border-navy-100 z-40">
+        <div className="container mx-auto px-4 py-3">
           <div className="text-center">
-            <h1 className="text-2xl font-serif text-navy-800">
+            <h1 className="text-xl font-serif text-navy-800">
               {weddingData.couple.bride.name} & {weddingData.couple.groom.name}
             </h1>
-            <p className="text-sm text-navy-500 mt-1">{weddingData.ceremony.akad.date}</p>
+            <p className="text-xs text-navy-500">{weddingData.ceremony.akad.date}</p>
           </div>
         </div>
       </header>
 
-      {/* Navigation */}
-      <Navigation 
-        sections={sections} 
-        activeSection={activeSection} 
-        setActiveSection={setActiveSection} 
-      />
-
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="transition-all duration-500 transform">
-            <CurrentSection />
+      {/* Main Scrolling Content */}
+      <main className="pt-20">
+        
+        {/* Hero Section */}
+        <ScrollSection id="home" className="min-h-screen flex items-center justify-center px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <HomeSection />
           </div>
-        </div>
+        </ScrollSection>
+
+        {/* Islamic Quote Section */}
+        <ScrollSection id="quote" className="min-h-screen flex items-center justify-center px-4 py-16">
+          <div className="max-w-4xl mx-auto w-full">
+            <IslamicQuote quote={weddingData.islamicQuote} />
+          </div>
+        </ScrollSection>
+
+        {/* Photo Gallery Section */}
+        <ScrollSection id="gallery" className="min-h-screen flex items-center justify-center px-4 py-16">
+          <div className="max-w-6xl mx-auto w-full">
+            <PhotoCarousel photos={weddingData.gallery} />
+          </div>
+        </ScrollSection>
+
+        {/* Couple Profiles Section */}
+        <ScrollSection id="couple" className="min-h-screen flex items-center justify-center px-4 py-16">
+          <div className="max-w-6xl mx-auto w-full">
+            <CoupleProfiles couple={weddingData.couple} />
+          </div>
+        </ScrollSection>
+
+        {/* Ceremony Details Section */}
+        <ScrollSection id="ceremony" className="min-h-screen flex items-center justify-center px-4 py-16">
+          <div className="max-w-6xl mx-auto w-full">
+            <CeremonyDetails ceremony={weddingData.ceremony} />
+          </div>
+        </ScrollSection>
+
+        {/* RSVP Section */}
+        <ScrollSection id="rsvp" className="min-h-screen flex items-center justify-center px-4 py-16">
+          <div className="max-w-6xl mx-auto w-full">
+            <GuestForm />
+          </div>
+        </ScrollSection>
+
       </main>
 
       {/* Footer */}
-      <footer className="bg-navy-800 text-white py-8 mt-16">
+      <footer className="bg-navy-800 text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center mb-4">
-            <Heart className="w-5 h-5 text-red-400 mx-2" />
-            <p className="text-navy-200">Terima kasih atas doa dan restu Anda</p>
-            <Heart className="w-5 h-5 text-red-400 mx-2" />
+          <div className="flex items-center justify-center mb-6">
+            <Heart className="w-6 h-6 text-red-400 mx-3" />
+            <p className="text-navy-200 text-lg">Terima kasih atas doa dan restu Anda</p>
+            <Heart className="w-6 h-6 text-red-400 mx-3" />
           </div>
-          <p className="text-navy-400 text-sm">
-            © 2024 Wedding Invitation | Made with Love
-          </p>
+          <div className="max-w-2xl mx-auto text-navy-300 leading-relaxed mb-6">
+            <p>
+              Kehadiran dan doa restu dari keluarga dan sahabat merupakan anugerah terindah 
+              bagi kami. Semoga Allah SWT senantiasa memberkahi langkah kami.
+            </p>
+          </div>
+          <div className="border-t border-navy-600 pt-6 mt-6">
+            <p className="text-navy-400 text-sm">
+              © 2024 Wedding Invitation | Made with Love
+            </p>
+          </div>
         </div>
       </footer>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <Button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 bg-navy-600 hover:bg-navy-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+          size="icon"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </Button>
+      )}
     </div>
   );
 };
