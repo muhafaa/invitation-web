@@ -164,64 +164,70 @@ const MainPage = ({ weddingData }) => {
   );
 };
 
+};
+
 // Home Section Component
 function HomeSection() {
   return (
-    <div className="space-y-12 animate-fadeIn">
+    <div className="space-y-16 animate-fadeIn">
       {/* Hero Section */}
-      <Card className="relative overflow-hidden bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm border-navy-200">
-        <div className="p-8 md:p-12 text-center">
-          <div className="space-y-6">
+      <Card className="relative overflow-hidden bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm border-navy-200 shadow-xl">
+        <div className="p-8 md:p-16 text-center">
+          <div className="space-y-8">
             <div className="animate-slideUp">
-              <h2 className="text-4xl md:text-6xl font-serif text-navy-800 leading-tight">
+              <h2 className="text-5xl md:text-7xl font-serif text-navy-800 leading-tight mb-6">
                 Sarah & Michael
               </h2>
-              <div className="w-24 h-1 bg-navy-400 mx-auto mt-4"></div>
+              <div className="w-32 h-1 bg-navy-400 mx-auto"></div>
             </div>
             
-            <p className="text-lg md:text-xl text-navy-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-navy-600 max-w-3xl mx-auto leading-relaxed font-light">
               Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Anda untuk hadir 
               dalam momen bahagia pernikahan kami
             </p>
             
-            <div className="flex items-center justify-center space-x-4 pt-4">
-              <div className="w-12 h-px bg-navy-300"></div>
-              <Heart className="w-6 h-6 text-red-400" />
-              <div className="w-12 h-px bg-navy-300"></div>
+            <div className="flex items-center justify-center space-x-6 pt-6">
+              <div className="w-16 h-px bg-navy-300"></div>
+              <Heart className="w-8 h-8 text-red-400 animate-pulse" />
+              <div className="w-16 h-px bg-navy-300"></div>
             </div>
           </div>
         </div>
       </Card>
 
       {/* Save the Date */}
-      <Card className="bg-navy-800 text-white border-navy-700">
-        <div className="p-8 text-center">
-          <Calendar className="w-12 h-12 text-navy-300 mx-auto mb-4" />
-          <h3 className="text-2xl font-serif mb-2">Save the Date</h3>
-          <p className="text-3xl font-bold text-navy-100 mb-2">15 Juni 2024</p>
-          <p className="text-navy-300">Sabtu</p>
+      <Card className="bg-gradient-to-br from-navy-800 to-navy-900 text-white border-navy-700 shadow-xl">
+        <div className="p-10 md:p-12 text-center">
+          <Calendar className="w-16 h-16 text-navy-300 mx-auto mb-6" />
+          <h3 className="text-3xl md:text-4xl font-serif mb-4">Save the Date</h3>
+          <p className="text-4xl md:text-5xl font-bold text-navy-100 mb-3">15 Juni 2024</p>
+          <p className="text-xl text-navy-300">Sabtu</p>
         </div>
       </Card>
 
       {/* Welcome Message */}
-      <Card className="bg-white/70 backdrop-blur-sm border-navy-200">
-        <div className="p-8">
-          <h3 className="text-2xl font-serif text-navy-800 text-center mb-6">
+      <Card className="bg-white/80 backdrop-blur-sm border-navy-200 shadow-xl">
+        <div className="p-8 md:p-12">
+          <h3 className="text-3xl md:text-4xl font-serif text-navy-800 text-center mb-8">
             Assalamualaikum Warahmatullahi Wabarakatuh
           </h3>
-          <div className="space-y-4 text-navy-600 leading-relaxed">
-            <p>
+          <div className="space-y-6 text-navy-600 leading-relaxed text-lg">
+            <p className="text-center">
               Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. 
               Ya Allah, perkenankanlah kami merangkai kasih sayang yang Kau ciptakan di antara putra-putri kami:
             </p>
-            <div className="text-center py-6">
-              <div className="inline-block space-y-2">
-                <p className="text-2xl font-serif text-navy-800">Sarah Amelia Putri</p>
-                <p className="text-navy-500">&</p>
-                <p className="text-2xl font-serif text-navy-800">Michael Pratama Santoso</p>
+            <div className="text-center py-8">
+              <div className="inline-block space-y-3">
+                <p className="text-3xl md:text-4xl font-serif text-navy-800">Sarah Amelia Putri</p>
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="w-12 h-px bg-navy-300"></div>
+                  <p className="text-2xl text-navy-500">&</p>
+                  <div className="w-12 h-px bg-navy-300"></div>
+                </div>
+                <p className="text-3xl md:text-4xl font-serif text-navy-800">Michael Pratama Santoso</p>
               </div>
             </div>
-            <p className="text-center">
+            <p className="text-center text-lg">
               Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i 
               berkenan hadir dan memberikan do'a restu kepada kami.
             </p>
