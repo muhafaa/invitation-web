@@ -209,7 +209,7 @@ const scrollToTop = () => {
 
 // SEO
 useHead({
-  title: `Wedding Invitation - ${weddingData?.couple.bride.name} & ${weddingData?.couple.groom.name}`,
+  title: `Wedding Invitation - ${weddingDataComputed?.couple.bride.name} & ${weddingDataComputed?.couple.groom.name}`,
   meta: [
     { name: 'description', content: 'Join us in celebrating our special wedding day' }
   ]
