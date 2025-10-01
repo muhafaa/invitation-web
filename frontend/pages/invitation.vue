@@ -63,7 +63,7 @@
         :visible-sections="visibleSections"
       >
         <div class="max-w-7xl mx-auto w-full">
-          <PhotoCarousel :photos="weddingData?.gallery" />
+          <PhotoCarousel :photos="weddingDataComputed?.gallery" />
         </div>
       </ScrollSection>
 
