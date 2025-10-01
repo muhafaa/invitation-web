@@ -192,8 +192,6 @@ const MainPage = ({ weddingData }) => {
   );
 };
 
-};
-
 // Home Section Component
 function HomeSection() {
   return (
