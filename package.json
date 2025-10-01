@@ -1,0 +1,36 @@
+{
+  "name": "invitation-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@vueuse/core": "^13.9.0",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.7",
+    "nuxt": "^4.1.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@iconify-json/lucide": "^1.2.68",
+    "@nuxt/devtools": "^2.6.5",
+    "@nuxt/eslint": "1.9.0",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-vue": "^10.5.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "typescript-eslint": "^8.45.0"
+  }
+}
