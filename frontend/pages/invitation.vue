@@ -11,9 +11,9 @@
       <div class="container mx-auto px-4 py-3">
         <div class="text-center">
           <h1 class="text-xl font-serif text-navy-800">
-            {{ weddingData?.couple.bride.name }} & {{ weddingData?.couple.groom.name }}
+            {{ weddingDataComputed?.couple.bride.name }} & {{ weddingDataComputed?.couple.groom.name }}
           </h1>
-          <p class="text-xs text-navy-500">{{ weddingData?.ceremony.akad.date }}</p>
+          <p class="text-xs text-navy-500">{{ weddingDataComputed?.ceremony.akad.date }}</p>
         </div>
       </div>
       <!-- Scroll Progress Bar -->
