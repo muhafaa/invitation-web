@@ -98,7 +98,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/b637a02c-fb47-4375-ad3a-52cd4a1e973b"
+        "./manifest/meta/dev.json"
       ],
       "#components": [
         "./components"
@@ -167,6 +167,7 @@
     "../../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/tailwindcss/node_modules",
+    "../node_modules/@nuxt/icon/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist",

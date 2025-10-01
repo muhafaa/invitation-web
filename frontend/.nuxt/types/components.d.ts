@@ -14,7 +14,16 @@ type HydrationStrategies = {
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 
 interface _GlobalComponents {
-      'NuxtWelcome': typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
+      'CeremonyDetails': typeof import("../../components/CeremonyDetails.vue")['default']
+    'CoupleProfiles': typeof import("../../components/CoupleProfiles.vue")['default']
+    'EventCard': typeof import("../../components/EventCard.vue")['default']
+    'GuestForm': typeof import("../../components/GuestForm.vue")['default']
+    'HomeSection': typeof import("../../components/HomeSection.vue")['default']
+    'IslamicQuote': typeof import("../../components/IslamicQuote.vue")['default']
+    'PhotoCarousel': typeof import("../../components/PhotoCarousel.vue")['default']
+    'ProfileCard': typeof import("../../components/ProfileCard.vue")['default']
+    'ScrollSection': typeof import("../../components/ScrollSection.vue")['default']
+    'NuxtWelcome': typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
     'ClientOnly': typeof import("../../node_modules/nuxt/dist/app/components/client-only")['default']
@@ -26,7 +35,8 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
     'NuxtImg': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
     'NuxtPicture': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
-    'NuxtPage': typeof import("../../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+    'Icon': typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
+    'NuxtPage': typeof import("../../node_modules/nuxt/dist/pages/runtime/page")['default']
     'NoScript': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['NoScript']
     'Link': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Link']
     'Base': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Base']
@@ -38,7 +48,16 @@ interface _GlobalComponents {
     'Body': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': typeof import("../../node_modules/nuxt/dist/app/components/server-placeholder")['default']
-      'LazyNuxtWelcome': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
+      'LazyCeremonyDetails': LazyComponent<typeof import("../../components/CeremonyDetails.vue")['default']>
+    'LazyCoupleProfiles': LazyComponent<typeof import("../../components/CoupleProfiles.vue")['default']>
+    'LazyEventCard': LazyComponent<typeof import("../../components/EventCard.vue")['default']>
+    'LazyGuestForm': LazyComponent<typeof import("../../components/GuestForm.vue")['default']>
+    'LazyHomeSection': LazyComponent<typeof import("../../components/HomeSection.vue")['default']>
+    'LazyIslamicQuote': LazyComponent<typeof import("../../components/IslamicQuote.vue")['default']>
+    'LazyPhotoCarousel': LazyComponent<typeof import("../../components/PhotoCarousel.vue")['default']>
+    'LazyProfileCard': LazyComponent<typeof import("../../components/ProfileCard.vue")['default']>
+    'LazyScrollSection': LazyComponent<typeof import("../../components/ScrollSection.vue")['default']>
+    'LazyNuxtWelcome': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
     'LazyClientOnly': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/client-only")['default']>
@@ -50,7 +69,8 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
     'LazyNuxtImg': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
     'LazyNuxtPicture': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
-    'LazyNuxtPage': LazyComponent<typeof import("../../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
+    'LazyIcon': LazyComponent<typeof import("../../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
+    'LazyNuxtPage': LazyComponent<typeof import("../../node_modules/nuxt/dist/pages/runtime/page")['default']>
     'LazyNoScript': LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
     'LazyLink': LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Link']>
     'LazyBase': LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Base']>

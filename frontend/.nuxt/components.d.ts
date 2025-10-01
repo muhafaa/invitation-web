@@ -14,6 +14,15 @@ type HydrationStrategies = {
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 
 
+export const CeremonyDetails: typeof import("../components/CeremonyDetails.vue")['default']
+export const CoupleProfiles: typeof import("../components/CoupleProfiles.vue")['default']
+export const EventCard: typeof import("../components/EventCard.vue")['default']
+export const GuestForm: typeof import("../components/GuestForm.vue")['default']
+export const HomeSection: typeof import("../components/HomeSection.vue")['default']
+export const IslamicQuote: typeof import("../components/IslamicQuote.vue")['default']
+export const PhotoCarousel: typeof import("../components/PhotoCarousel.vue")['default']
+export const ProfileCard: typeof import("../components/ProfileCard.vue")['default']
+export const ScrollSection: typeof import("../components/ScrollSection.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -26,7 +35,8 @@ export const NuxtTime: typeof import("../node_modules/nuxt/dist/app/components/n
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
 export const NuxtImg: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
 export const NuxtPicture: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
-export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+export const Icon: typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
+export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']
 export const NoScript: typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
 export const Link: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
 export const Base: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
@@ -38,6 +48,15 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
+export const LazyCeremonyDetails: LazyComponent<typeof import("../components/CeremonyDetails.vue")['default']>
+export const LazyCoupleProfiles: LazyComponent<typeof import("../components/CoupleProfiles.vue")['default']>
+export const LazyEventCard: LazyComponent<typeof import("../components/EventCard.vue")['default']>
+export const LazyGuestForm: LazyComponent<typeof import("../components/GuestForm.vue")['default']>
+export const LazyHomeSection: LazyComponent<typeof import("../components/HomeSection.vue")['default']>
+export const LazyIslamicQuote: LazyComponent<typeof import("../components/IslamicQuote.vue")['default']>
+export const LazyPhotoCarousel: LazyComponent<typeof import("../components/PhotoCarousel.vue")['default']>
+export const LazyProfileCard: LazyComponent<typeof import("../components/ProfileCard.vue")['default']>
+export const LazyScrollSection: LazyComponent<typeof import("../components/ScrollSection.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -50,7 +69,8 @@ export const LazyNuxtTime: LazyComponent<typeof import("../node_modules/nuxt/dis
 export const LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
 export const LazyNuxtImg: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
 export const LazyNuxtPicture: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
-export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
+export const LazyIcon: LazyComponent<typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
+export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']>
 export const LazyNoScript: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
 export const LazyLink: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>
 export const LazyBase: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']>
