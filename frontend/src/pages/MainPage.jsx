@@ -12,6 +12,7 @@ const MainPage = ({ weddingData }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [visibleSections, setVisibleSections] = useState(new Set());
+  const [scrollProgress, setScrollProgress] = useState(0);
   
   const sectionRefs = {
     home: useRef(null),
