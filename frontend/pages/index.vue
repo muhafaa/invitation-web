@@ -60,9 +60,9 @@
                 
                 <div class="space-y-4">
                   <div class="text-2xl md:text-3xl font-serif text-navy-800 leading-tight">
-                    {{ weddingData?.couple.bride.name }}
+                    {{ weddingDataComputed?.couple.bride.name }}
                     <span class="block text-lg text-navy-600 font-light my-2">&</span>
-                    {{ weddingData?.couple.groom.name }}
+                    {{ weddingDataComputed?.couple.groom.name }}
                   </div>
                   
                   <div class="space-y-2 text-navy-600">
