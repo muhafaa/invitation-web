@@ -91,7 +91,7 @@
         :visible-sections="visibleSections"
       >
         <div class="max-w-7xl mx-auto w-full">
-          <CeremonyDetails :ceremony="weddingData?.ceremony" />
+          <CeremonyDetails :ceremony="weddingDataComputed?.ceremony" />
         </div>
       </ScrollSection>
 
