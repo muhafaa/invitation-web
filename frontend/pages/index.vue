@@ -101,20 +101,8 @@ const guestName = ref(route.query.kpd || 'Tamu Undangan')
 const isOpening = ref(false)
 const mockAPI = useMockAPI()
 
-// Load wedding data on mount
-const weddingDataRef = ref(null)
-
-onMounted(async () => {
-  try {
-    const data = await mockAPI.getWeddingData()
-    weddingDataRef.value = data
-  } catch (error) {
-    console.error('Error loading wedding data:', error)
-  }
-})
-
-// Use weddingData from composable
-const weddingDataComputed = computed(() => weddingDataRef.value || staticWeddingData)
+// Use static wedding data
+const weddingDataComputed = staticWeddingData
 
 const openInvitation = () => {
   isOpening.value = true
