@@ -92,7 +92,7 @@
 </template>
 
 <script setup>
-import { weddingData as staticWeddingData, useMockAPI } from '~/composables/useMockData'
+import { weddingData as staticWeddingData } from '~/composables/useMockData'
 
 // Get guest name from query params
 const route = useRoute()
