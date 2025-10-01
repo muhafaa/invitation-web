@@ -175,8 +175,8 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-// Use weddingData directly
-const weddingData = weddingDataRef
+// Use weddingData from composable
+const weddingDataComputed = computed(() => weddingDataRef.value || weddingData)
 
 const handleScroll = () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop
