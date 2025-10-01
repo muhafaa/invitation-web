@@ -98,43 +98,58 @@ const MainPage = ({ weddingData }) => {
       <main className="pt-20">
         
         {/* Hero Section */}
-        <ScrollSection id="home" className="min-h-screen flex items-center justify-center px-4 py-16">
-          <div className="max-w-4xl mx-auto">
+        <ScrollSection id="home" className="min-h-screen flex items-center justify-center px-4 py-20">
+          <div className="max-w-5xl mx-auto">
             <HomeSection />
           </div>
         </ScrollSection>
 
+        {/* Section Divider */}
+        <div className="h-20 bg-gradient-to-b from-transparent via-navy-100/30 to-transparent"></div>
+
         {/* Islamic Quote Section */}
-        <ScrollSection id="quote" className="min-h-screen flex items-center justify-center px-4 py-16">
-          <div className="max-w-4xl mx-auto w-full">
+        <ScrollSection id="quote" className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-navy-50/30 to-blue-50/30">
+          <div className="max-w-5xl mx-auto w-full">
             <IslamicQuote quote={weddingData.islamicQuote} />
           </div>
         </ScrollSection>
 
+        {/* Section Divider */}
+        <div className="h-20 bg-gradient-to-b from-transparent via-slate-100/50 to-transparent"></div>
+
         {/* Photo Gallery Section */}
-        <ScrollSection id="gallery" className="min-h-screen flex items-center justify-center px-4 py-16">
-          <div className="max-w-6xl mx-auto w-full">
+        <ScrollSection id="gallery" className="min-h-screen flex items-center justify-center px-4 py-20">
+          <div className="max-w-7xl mx-auto w-full">
             <PhotoCarousel photos={weddingData.gallery} />
           </div>
         </ScrollSection>
 
+        {/* Section Divider */}
+        <div className="h-20 bg-gradient-to-b from-transparent via-navy-50/40 to-transparent"></div>
+
         {/* Couple Profiles Section */}
-        <ScrollSection id="couple" className="min-h-screen flex items-center justify-center px-4 py-16">
-          <div className="max-w-6xl mx-auto w-full">
+        <ScrollSection id="couple" className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-slate-50/50 to-navy-50/40">
+          <div className="max-w-7xl mx-auto w-full">
             <CoupleProfiles couple={weddingData.couple} />
           </div>
         </ScrollSection>
 
+        {/* Section Divider */}
+        <div className="h-20 bg-gradient-to-b from-transparent via-blue-50/40 to-transparent"></div>
+
         {/* Ceremony Details Section */}
-        <ScrollSection id="ceremony" className="min-h-screen flex items-center justify-center px-4 py-16">
-          <div className="max-w-6xl mx-auto w-full">
+        <ScrollSection id="ceremony" className="min-h-screen flex items-center justify-center px-4 py-20">
+          <div className="max-w-7xl mx-auto w-full">
             <CeremonyDetails ceremony={weddingData.ceremony} />
           </div>
         </ScrollSection>
 
+        {/* Section Divider */}
+        <div className="h-20 bg-gradient-to-b from-transparent via-navy-100/30 to-transparent"></div>
+
         {/* RSVP Section */}
-        <ScrollSection id="rsvp" className="min-h-screen flex items-center justify-center px-4 py-16">
-          <div className="max-w-6xl mx-auto w-full">
+        <ScrollSection id="rsvp" className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-navy-50/30 to-slate-50/50">
+          <div className="max-w-7xl mx-auto w-full">
             <GuestForm />
           </div>
         </ScrollSection>
