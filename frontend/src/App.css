@@ -113,40 +113,7 @@
     animation: slideDown 0.4s ease-out;
 }
 
-/* Navy Blue Color Palette */
-.bg-navy-50 { background-color: #f8fafc; }
-.bg-navy-100 { background-color: #f1f5f9; }
-.bg-navy-200 { background-color: #e2e8f0; }
-.bg-navy-300 { background-color: #cbd5e1; }
-.bg-navy-400 { background-color: #94a3b8; }
-.bg-navy-500 { background-color: #64748b; }
-.bg-navy-600 { background-color: #475569; }
-.bg-navy-700 { background-color: #334155; }
-.bg-navy-800 { background-color: #1e293b; }
-.bg-navy-900 { background-color: #0f172a; }
-
-.text-navy-50 { color: #f8fafc; }
-.text-navy-100 { color: #f1f5f9; }
-.text-navy-200 { color: #e2e8f0; }
-.text-navy-300 { color: #cbd5e1; }
-.text-navy-400 { color: #94a3b8; }
-.text-navy-500 { color: #64748b; }
-.text-navy-600 { color: #475569; }
-.text-navy-700 { color: #334155; }
-.text-navy-800 { color: #1e293b; }
-.text-navy-900 { color: #0f172a; }
-
-.border-navy-100 { border-color: #f1f5f9; }
-.border-navy-200 { border-color: #e2e8f0; }
-.border-navy-300 { border-color: #cbd5e1; }
-.border-navy-400 { border-color: #94a3b8; }
-.border-navy-500 { border-color: #64748b; }
-.border-navy-600 { border-color: #475569; }
-.border-navy-700 { border-color: #334155; }
-
-/* Gold Accent Color */
-.bg-gold-400 { background-color: #fbbf24; }
-.text-gold-400 { color: #fbbf24; }
+/* Colors are now handled by Tailwind config */
 
 /* Custom Typography */
 .font-arabic {
