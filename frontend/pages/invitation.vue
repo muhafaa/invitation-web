@@ -49,7 +49,7 @@
         :visible-sections="visibleSections"
       >
         <div class="max-w-5xl mx-auto w-full">
-          <IslamicQuote :quote="weddingData?.islamicQuote" />
+          <IslamicQuote :quote="weddingDataComputed?.islamicQuote" />
         </div>
       </ScrollSection>
 
