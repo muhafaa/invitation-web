@@ -125,7 +125,7 @@ const openInvitation = () => {
 
 // SEO
 useHead({
-  title: `Wedding Invitation - ${weddingData?.couple.bride.name} & ${weddingData?.couple.groom.name}`,
+  title: `Wedding Invitation - ${weddingDataComputed.value?.couple.bride.name} & ${weddingDataComputed.value?.couple.groom.name}`,
   meta: [
     { name: 'description', content: 'You are cordially invited to the wedding celebration' },
     { property: 'og:title', content: 'Wedding Invitation' },
