@@ -145,7 +145,7 @@
 </template>
 
 <script setup>
-import { weddingData, useMockAPI } from '~/composables/useMockData'
+import { weddingData as staticWeddingData, useMockAPI } from '~/composables/useMockData'
 
 const isVisible = ref(false)
 const showScrollTop = ref(false)
