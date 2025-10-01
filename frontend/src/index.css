@@ -235,7 +235,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enhanced Button Styles */
 .btn-navy {
-    @apply bg-navy-600 hover:bg-navy-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    background-color: #475569;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-navy:hover {
+    background-color: #334155;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(71, 85, 105, 0.2);
 }
 
 .btn-navy:active {
