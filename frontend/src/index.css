@@ -257,11 +257,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Card Enhancement */
 .wedding-card {
-    @apply bg-white/80 backdrop-blur-sm border border-navy-200 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .wedding-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* Elegant Dividers */
