@@ -27,7 +27,12 @@ const MainPage = ({ weddingData }) => {
     setIsVisible(true);
     
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 500);
+      const scrollTop = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = (scrollTop / documentHeight) * 100;
+      
+      setShowScrollTop(scrollTop > 500);
+      setScrollProgress(Math.min(scrollPercentage, 100));
       
       // Check which sections are visible
       const newVisibleSections = new Set();
