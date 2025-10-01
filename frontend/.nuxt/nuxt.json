@@ -1,0 +1,9 @@
+{
+  "_hash": "_nRsS4sj098pP3eewN-tDDc16yKltcE2gdOrbntHR2U",
+  "project": {
+    "rootDir": "/app/frontend"
+  },
+  "versions": {
+    "nuxt": "4.1.2"
+  }
+}
