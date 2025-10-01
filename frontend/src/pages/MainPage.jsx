@@ -85,6 +85,13 @@ const MainPage = ({ weddingData }) => {
             <p className="text-xs text-navy-500">{weddingData.ceremony.akad.date}</p>
           </div>
         </div>
+        {/* Scroll Progress Bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-navy-100">
+          <div 
+            className="h-full bg-gradient-to-r from-navy-600 to-navy-500 transition-all duration-300 ease-out"
+            style={{ width: `${scrollProgress}%` }}
+          />
+        </div>
       </header>
 
       {/* Main Scrolling Content */}
